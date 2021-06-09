@@ -22,7 +22,7 @@ def is_isogram_t(word):
     num = len(i)
     while j < num:
         k = 0
-        while j < num - 1:
+        while j + k < num - 1:
             
             k = k+1
         
