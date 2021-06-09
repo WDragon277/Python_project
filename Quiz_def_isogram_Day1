@@ -26,7 +26,7 @@ def is_isogram_t(word):
             
             k = k+1
         
-            if i{j] == i[j+k]:
+            if i[j] == i[j+k]:
                 print('false')
                 break 
                 
