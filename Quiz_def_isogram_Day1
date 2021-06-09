@@ -7,9 +7,8 @@ a = 'dermatoglyphics'#true
 b = 'aba'#false
 c = 'moose'#false
 d = 'isisogram'#false
-# 글자수 변수 num 선언
-num = 0
 
+word = [a,b,c,d]
 
 # 하나의 문자열에서 첫글자부터 끝까지 한글자씩 선택한 뒤, 문자열에 동일한 문자가 있는지 확인한다. 
 # 있을 경우 false 출력하고 나머지 확인 없이 끝
