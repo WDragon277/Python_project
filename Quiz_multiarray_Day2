@@ -44,3 +44,30 @@ def multiarray_input(a=[[]]):
     for i in range(len(a)):
         multiple_result = multiple_result * len(set(a[i]))
     return multiple_result
+    
+########################################################################## 퀴즈에 있는 함수를 테스트하기
+#함수를 테스트할때 'unittest'를 이용할 수 있다. 
+#결과값을 self.assert*() 메서드를 사용하여 확인한다.
+#여기서는  self.assertEqual을 이용했다. 함수, 입력값, 출력값을 적어두면 된다.
+
+import unittest
+from Quiz_multiarray_Day2 import multiarray_input
+
+
+class Tests(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(multiarray_input([[1, 2], [4], [5, 6]]), 4)
+
+    def test_2(self):
+        self.assertEqual(multiarray_input([[1, 2], [4, 4], [5, 6, 6]]), 4)
+
+    def test_3(self):
+        self.assertEqual(multiarray_input([[1, 2], [3, 4], [5, 6]]), 8)
+
+    def test_4(self):
+        self.assertEqual(multiarray_input([[1, 2, 3], [3, 4, 6, 6, 7], [8, 9, 10, 12, 5, 6]]), 72)
+
+
+if __name__ == '__main__':
+    unittest.main()
+
