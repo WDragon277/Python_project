@@ -50,5 +50,9 @@ class Tests(unittest.TestCase):
     def test_3(self):
         self.assertEqual(listsum_center([0]), 0)
 
+    def test_4(self):
+        self.assertEqual(listsum_center([1,1]), -1)
+
+
         if __name__ == '__main__':
             unittest.main()
