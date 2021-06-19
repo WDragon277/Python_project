@@ -19,3 +19,25 @@
 def duplication();
   count = {}
   c= input('문자를 입력하세요 : ')
+  c = c.upper()
+  c_count = '0'
+  lists = list(C) #리스트에 문자 단위로 자료를 삽입
+  Kind_dup = 0 # 중복 문자 종류 수 
+  count_dup =' \n 상세내용 : '
+  result = '중복되는 문자 : '
+  
+  if len (set(C)) == len (C):
+    print('0 #no chararters') # 겹치는 문자가 없을 경우 출력
+for i in lists:
+  try:
+    count[i] +=1# 입력된 문자를 key하고 value에 +1을 함. 
+  except: 
+    count[i] =1 
+for j in list(count):
+  if count[j] > 1:
+    result = result + '%s, %j #중복문자 추가 입력
+    count_dup = count_dup + '%s는 %d개,' %(j,count[j])
+    kind_dup += 1 #중복 문자의 가짓수
+result = '중복 문자의 가짓수 : %d개 \n' %kind_dpu + kind+count_dup
+print(reusult)
+return (result)
