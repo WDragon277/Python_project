@@ -1,0 +1,9 @@
+#입력 된 세 문자열의 모든 문자를 그룹으로 결합하는 문자열을 반환하는 함수를 만듭니다. 모든 입력의 첫 글자를 가져와서 서로 그룹화 합니다. 
+#모든 문자에 대해 이 작업을 수행하십시오
+E.g input : "aa", "bb", "cc", => Output : "abcabc"
+
+tripleTrouble(one, two, three) => "ottnwheor"
+tripleTrouble("this","test","lock") => "ttlheoiscstk"
+
+
+
