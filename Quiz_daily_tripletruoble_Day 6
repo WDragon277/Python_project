@@ -1,0 +1,25 @@
+#입력 된 세 문자열의 모든 문자를 그룹으로 결합하는 문자열을 반환하는 함수를 만듭니다. 모든 입력의 첫 글자를 가져와서 서로 그룹화 합니다. 
+#모든 문자에 대해 이 작업을 수행하십시오
+E.g input : "aa", "bb", "cc", => Output : "abcabc"
+
+tripleTrouble(one, two, three) => "ottnwheor"
+tripleTrouble("this","test","lock") => "ttlheoiscstk"
+
+#1. 문자열을 리스트로 받는다. 
+#1* 받는 문자열의 길이는 3개의 문자열 중 최소 길이의 문자열로 한다. (len메서드 이용)
+#2. for문을 이용해서 리스트 내의 같은 위치의 자료를 받는 리스트를 만든다.
+#3. 2번째 리스트를 출력한다. 
+
+def tripletruoble(one, two, three):
+  a = list(one)
+  b = list(two)
+  c = list(three)
+  stdlen = Max(a.len, b.len, c.len)
+  TripleTour = list()
+  
+  for i in TripleTour:
+  TripleTour = a[0] + b[0] + c[0] 
+  
+  
+  
+ 
