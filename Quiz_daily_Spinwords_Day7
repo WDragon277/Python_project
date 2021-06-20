@@ -3,3 +3,19 @@
 # spinwords("this is a test") => returns "this is a test
 # spinwords("this is another test") => returns "this is rethona test"
 
+
+#split을 이용해서 단어별로 리스트 요소에 추가함
+#요소마다 길이를 재서 5이상인 경우 reverse메서드를 이용함.
+
+def spinword():
+    Char = input('문자열을 입력하세요 : ')
+    S_char = Char.split(' ')
+    j = 0
+    for i in S_char:
+
+        if len(i) >= 5:
+            S_char[j] = i[::-1]
+        j = j+1
+    print(S_char)
+    return S_char
+  
