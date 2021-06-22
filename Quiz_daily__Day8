@@ -17,3 +17,24 @@ result  =  "123456789101112"
 
 #모든 글자를 키로 하는 사전을 만들고 문자열 단어가 해당하는 키값일 경우 밸류로 1을 제공하고 +1을 한다. 
 # 다른 방법이 뭐가 있을까
+
+import pandas as pd
+
+def count_duplication():
+  a = input('문자열을 입력하세요 :')
+  c = list( 0 for i in range(len(a)))
+  A = list(a)
+  RA = A[::-1]
+  df = pd.DataFrame({'명단':A,'횟수':c})
+  st_point = 0
+  
+  for i in A:
+    k = st_point
+    st_point +=1
+
+    for j in A[(st_point -1):]:
+      if i ==j:
+        c[k] += 1
+      k += 1
+  df = pd.DataFrame({'명단':A,'횟수':c})
+  return df
