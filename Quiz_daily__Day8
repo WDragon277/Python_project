@@ -37,4 +37,4 @@ def count_duplication():
         c[k] += 1
       k += 1
   df = pd.DataFrame({'명단':A,'횟수':c})
-  return df
+  return df,A,c
