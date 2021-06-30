@@ -12,7 +12,7 @@ sortArray([5, 3, 2, 8, 1, 4]) // [1, 3, 2, 8, 5, 4]
 sortArray([5, 3, 1, 8, 0])    // [1, 3, 5, 8, 0]
 
 ###############################################
-
+def sorArray():
 array = input('배열을 입력하세요 :')
 count = 0
 for i in array:
@@ -32,4 +32,4 @@ for i in array:
           array[k] = i
           i = temp
   count += 1
-      
+return 
