@@ -33,3 +33,20 @@ for i in array:
           i = temp
   count += 1
 return 
+
+def sorArray2():
+array = input('배열을 입력하세요 :')
+length = len(array)
+index = list(0 for i in array)
+
+Temp = list(0 for i in array)
+Temp2 = list(0 for i in array)
+
+oder = 1
+oder = 0 
+for i in a:
+  if oder %2 ==1:
+   if i% 2 ==1:
+    index[oder2] = oder-1
+    oder2 += 1
+  oder += 1
