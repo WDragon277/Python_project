@@ -50,3 +50,12 @@ for i in a:
     index[oder2] = oder-1
     oder2 += 1
   oder += 1
+
+oder = 1
+oder = 0 
+for i in a:
+  if oder %2 ==1:
+   if i% 2 ==1:
+    index[oder2] = oder-1
+    oder2 += 1
+  oder += 1
