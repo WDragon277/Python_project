@@ -1,0 +1,26 @@
+def self_checkout_T()
+  a =input("사람들의 예상 소요시간을 리스트로 입력하세요). split()
+  print(a)
+  b = int(input("사용할 수 있는 계산대 갯수를 입력하세요 :"))
+  
+    B=[0]*b
+   
+    if len(a) < b:
+      print(max(a))
+    else: #사람이 계산대 보다 많을 때
+      n =0
+      m=0
+      for i in B : #계산대를 채움
+        B[m]=a[n]
+        n+=1
+        m+=1
+      n=m
+      while n < len(a): #계산이 먼저 끝난 사람 뒤에 남은 사람이 계산을 함
+        B.sort() # 최소시간인 사람을 정렬함
+        B[0] += a[n]
+        n+=1
+    return print(max(B))
+    
+if __name__="__main__":
+    self_checkout_T()
+  
