@@ -1,1 +1,61 @@
+def maze_runner()
+    maze = [[1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,3],
+            [1,0,1,0,1,0,1],
+            [0,0,1,0,0,0,1],
+            [1,0,1,0,1,0,1],
+            [1,0,0,0,0,0,1],
+            [1,2,1,0,1,0,1]]
 
+    direction = input("방향을 'N',"S","E","W"로 입력하세요 : ").split(',') 
+    direction.upper()
+    mazesize_x = len(maze)
+    mazesize_y = len(maze[0])
+    count = 0
+    goal = [0,0]
+    start = [0,0]
+    player_start = [0,0]
+    act = len(direction)
+
+    for i in maze:
+        if 3 in i:
+            goal[0] = maze.index(i)
+            goal[1] = i.index(3)
+    for i in maze
+        if 2 in i:
+            start[0] = maze.index(i)
+            start[1] = i.index(2)
+            player_strat[0] = maze.index(i)
+            player_start[1] = i.index(2)
+
+    while count < act:
+        for j in direction:
+            j.upper()
+            if j == 'N':
+                player_start[0] -= 1
+                if player_start == goal:
+                    result = 'Final'
+
+            elif j == 'S':
+                player_start[0] += 1
+                if player_start == goal:
+                    result = 'Final'
+
+            elif j == 'E':
+                player_start[1] += 1
+                if player_start == goal:
+                    result = 'Final'
+
+            elif j == 'W':
+                player_start[1] -= 1
+                if player_start == goal:
+                    result = 'Final'
+            else:
+                print('error')
+            count += 1
+
+            if maze[player_start[0]][player_start[1]] == 1:
+                result = 'LOST'
+            elif maze[player_start[0]][player_start[1]] < 1:
+                result = 'LOST'
+    return print(result)
