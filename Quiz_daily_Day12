@@ -35,3 +35,34 @@ foldArray([1, 2, 3, 4, 5], 2) => [9, 6]
 foldArray([1, 2, 3, 4, 5], 3) => [15]
 
 foldArray([-9, 9, -8, 8, 66, 23], 1) => [14, 75, 0]
+
+def fold_sum():
+    a = [int(x) for x in input("배열을 입력하세요 :").split()]
+    b = int(input("연산 횟수를 입력하세요 :"))
+    length = len(a)
+    fold = 0
+    while fold < b:
+        if length % 2 == 1:  # 홀수길이 리스트 접기
+            temp = list(0 for i in range(int(length / 2) + 1))
+            n = 0
+            for i in temp:
+                temp[0 + n] = a[0 + n] + a[length - 1 - n]
+                n += 1
+                temp[int(length / 2)] = a[int(length / 2)]
+            length = len(temp)
+            a = temp
+        else:  # 짝수 길이 리스트 접기
+            temp = list(0 for i in range(int(length / 2)))
+            count = list(0 for i in range(len(temp) + 1))
+            n = 0
+            for i in temp:
+                temp[0 + n] = a[0 + n] + a[length - 1 - n]
+                n += 1
+            length = len(temp)
+            a = temp
+        fold += 1
+    return print(a)
+
+
+if __name__ == '__main__':
+    fold_sum()
