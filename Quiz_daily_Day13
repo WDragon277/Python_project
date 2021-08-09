@@ -23,26 +23,30 @@ queue_time([2,3,10], 2)
 
 Clarifications
 많은 틸을 제공하는 유일한 대기열은 대기열의 순서는 변경되지 않으며 대기열의 앞쪽 사람(즉, 배열/목록의 첫 번째 요소)이 없어질때 까지 계속된다.
+========================================================================================
 
-a = [2,3,3,10]
-b = 2
-A = (a,b)
+a = [int(x) for x in input("배열을 입력하세요 :").split()]
+b = int(input("카운터 갯수 를 입력하세요 :"))
 
-B = [0] * b
+def self_checkout_T(a,b):
+    A = (a, b)
+    B = [0] * b
 
-if len(a) < b:
-  print(max(a))
-else:
-  n=0
-  m=0
-    for i in B:
-      B[m]=a[n]
-      n+=1
-      m+=1
-    n=m
-    while n<len(a):
-      B.sort()
-      B[0] += a[n]
-      n +=1
-    print(max(B))
-      
+    if len(a) < b:
+        print(max(a))
+    else:
+        n = 0
+        m = 0
+        for i in B:
+            B[m] = a[n]
+            n += 1
+            m += 1
+        n = m
+        while n < len(a):
+            B.sort()
+            B[0] += a[n]
+            n += 1
+    return print(max(B))
+
+if __name__ == '__main__':
+    self_checkout_T(a,b)
