@@ -3,42 +3,37 @@
 # Isogram일 경우 True를 반환하고 아닐 경우에 false를 반환한다. 
 
 # 문자열을 넣을 변수를 만든다.
-a = 'dermatoglyphics'
-b = 'aba'
-c = 'moose'
-d = 'isisogram'
-# 글자수 변수 num 선언
-num = 0
+a = 'dermatoglyphics'#true
+b = 'aba'#false
+c = 'moose'#false
+d = 'isisogram'#false
 
+word = [a,b,c,d]
 
 # 하나의 문자열에서 첫글자부터 끝까지 한글자씩 선택한 뒤, 문자열에 동일한 문자가 있는지 확인한다. 
 # 있을 경우 false 출력하고 나머지 확인 없이 끝
 # 없을 경우 true 출력하고 끝
 
-
-
   
 #함수에 변수를 입력하는 함수
-def is_isogram_t
-  print ('a~d 까지 선택해주세요')
-  temp = input()
-  num = len(temp)
-  i=0
-#인덱싱을 써보자. 
-  while i < num:
-      j = 1
-      while j < num-i:
-          if temp[i] == temp[i + j]:
-              print ('false')
-              break
-          if temp[i] != temp[i+j]:
-              print ('true')
-              break
-          else:
-              j = j + 1
-      
-      i= i+1
-
-#오늘 결과 -> 전체 while에 break를 걸지 못해서 false가 나와도 계속 while문을 돌림
-#전체 문장을 비교할 수 있는 반복확인 알고리즘이 필요함
-#음.. for문이 더 적당할거 같단 생각이 듬
+def is_isogram_t(word):
+  for i in word:
+    j=0
+    num = len(i)
+    while j < num:
+        k = 0
+        while j + k < num - 1:
+            
+            k = k+1
+        
+            if i[j] == i[j+k]:
+                print('false')
+                break 
+                
+        if j == num -1:
+            print('true')
+            break
+            
+        if i[j] == i[j+k]:
+            break
+        j = j + 1 
